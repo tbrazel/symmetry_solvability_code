@@ -23,6 +23,18 @@ InstallGlobalFunction( SGV_AssertUniqueSubgroupWithId, function( G, id )
                     List( AllSubgroups( G ), IdGroup ) ) );
 end );
 
+InstallGlobalFunction( SGV_AssertIsNormalizer, function( G, H, N )
+    local NGH;
+    NGH := Normalizer( G, H );
+    if NGH = N then
+        return true;
+    fi;
+    return rec( expectedSize    := Size( N ),
+                foundSize       := Size( NGH ),
+                expectedInFound := IsSubgroup( NGH, N ),
+                foundInExpected := IsSubgroup( N, NGH ) );
+end );
+
 #############################################################################
 ##  Claims
 ##
