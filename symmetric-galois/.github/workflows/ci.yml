@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  # Do the labels cited in the GAP sources still exist in the paper?
+  # Cheap, so it runs first and independently of GAP.
+  labels:
+    name: Label consistency
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check every cited label resolves
+        run: python3 tools/crossref.py gap paper/output.aux --check
+      - name: Check gap/paper-refs.g is up to date with paper/output.aux
+        run: |
+          python3 tools/crossref.py gap paper/output.aux \
+            --format gap --out /tmp/paper-refs.g
+          diff -u gap/paper-refs.g /tmp/paper-refs.g
+
+  test:
+    name: GAP ${{ matrix.gap-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Pin one version so the verification is reproducible, and track the
+        # latest so you learn early when something breaks under you.
+        gap-version: ["v4.14.0", "latest"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gap-actions/setup-gap@v3
+        with:
+          gap-version: ${{ matrix.gap-version }}
+      - uses: gap-actions/build-pkg@v1
+      - uses: gap-actions/run-pkg-tests@v2
