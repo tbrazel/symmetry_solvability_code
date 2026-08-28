@@ -107,6 +107,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "qType2",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Representative legacy quartic-symmetry subgroup of PSL62, type 2 (qType2)",
   gens:= [
@@ -134,6 +135,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "qType3",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Representative legacy quartic-symmetry subgroup of PSL62, type 3 (qType3)",
   gens:= [
@@ -161,6 +163,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "qType4",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Representative legacy quartic-symmetry subgroup of PSL62, type 4 (qType4)",
   gens:= [
@@ -206,6 +209,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "qType5",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Representative legacy quartic-symmetry subgroup of PSL62, type 5 (qType5)",
   gens:= [
@@ -251,6 +255,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "qType6",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Representative legacy quartic-symmetry subgroup of PSL62, type 6 (qType6)",
   gens:= [
@@ -269,6 +274,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "qType7",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Representative legacy quartic-symmetry subgroup of PSL62, type 7 (qType7)",
   gens:= [
@@ -305,6 +311,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "qType8",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Representative legacy quartic-symmetry subgroup of PSL62, type 8 (qType8)",
   gens:= [
@@ -323,6 +330,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "qType9",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Representative legacy quartic-symmetry subgroup of PSL62, type 9 (qType9)",
   gens:= [
@@ -350,6 +358,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "qType10",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Representative legacy quartic-symmetry subgroup of PSL62, type 10 (qType10)",
   gens:= [
@@ -377,6 +386,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "qType11",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Representative legacy quartic-symmetry subgroup of PSL62, type 11 (qType11)",
   gens:= [
@@ -395,6 +405,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "qType12",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Representative legacy quartic-symmetry subgroup of PSL62, type 12 (qType12)",
   gens:= [
@@ -413,6 +424,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "nType1",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Stored normalizer representative in PSL62 for legacy quartic symmetry type 1 (n1)",
   gens:= [
@@ -449,6 +461,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "nType2",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Stored normalizer representative in PSL62 for legacy quartic symmetry type 2 (n2)",
   gens:= [
@@ -494,6 +507,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "nType3",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Stored normalizer representative in PSL62 for legacy quartic symmetry type 3 (n3)",
   gens:= [
@@ -539,6 +553,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "nType4",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Stored normalizer representative in PSL62 for legacy quartic symmetry type 4 (n4)",
   gens:= [
@@ -602,6 +617,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "nType5",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Stored normalizer representative in PSL62 for legacy quartic symmetry type 5 (n5)",
   gens:= [
@@ -683,6 +699,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "nType6",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Stored normalizer representative in PSL62 for legacy quartic symmetry type 6 (n6)",
   gens:= [
@@ -710,6 +727,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "nType7",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Stored normalizer representative in PSL62 for legacy quartic symmetry type 7 (n7)",
   gens:= [
@@ -782,6 +800,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "nType8",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Stored normalizer representative in PSL62 for legacy quartic symmetry type 8 (n8)",
   gens:= [
@@ -827,6 +846,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "nType9",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Stored normalizer representative in PSL62 for legacy quartic symmetry type 9 (n9)",
   gens:= [
@@ -890,6 +910,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "nType10",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Stored normalizer representative in PSL62 for legacy quartic symmetry type 10 (n10)",
   gens:= [
@@ -953,6 +974,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "nType11",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Stored normalizer representative in PSL62 for legacy quartic symmetry type 11 (n11)",
   gens:= [
@@ -989,6 +1011,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "nType12",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Stored normalizer representative in PSL62 for legacy quartic symmetry type 12 (n12)",
   gens:= [
