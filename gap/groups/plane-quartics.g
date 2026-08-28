@@ -79,6 +79,7 @@ SGV_RegisterGroup( rec(
 
 SGV_RegisterGroup( rec(
   id := "qType1",
+  ambient := "PSL62",
   field := Rationals,
   comment := "Representative legacy quartic-symmetry subgroup of PSL62, type 1 (qType1)",
   gens:= [

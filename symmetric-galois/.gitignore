@@ -1,8 +1,0 @@
-*.aux
-!paper/output.aux
-*.log
-*.out
-doc/*.html
-doc/*.six
-doc/manual.pdf
-__pycache__/
