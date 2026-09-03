@@ -18,7 +18,19 @@ DeclareGlobalFunction( "SGV_CountSubgroupClassesWithId" );
 #! Returns true, or a record describing what was found instead.
 DeclareGlobalFunction( "SGV_AssertUniqueSubgroupWithId" );
 
+#! Claim helper: <A>G</A> has exactly one conjugacy class of subgroups with
+#! IdGroup <A>id</A> -- i.e. a subgroup isomorphic to that group exists and is
+#! unique up to conjugacy in <A>G</A>, though there may be many such subgroups.
+#! A strictly weaker statement than SGV_AssertUniqueSubgroupWithId; keep the two
+#! apart.  Returns true, or a record describing what was found instead.
+DeclareGlobalFunction( "SGV_AssertUniqueSubgroupClassWithId" );
+
 #! Claim helper: <A>N</A> is the normalizer of <A>H</A> in <A>G</A>, i.e.
 #! N_<A>G</A>(<A>H</A>) = <A>N</A> as subgroups of <A>G</A>.  Returns true, or a
 #! record describing how the computed normalizer differs from <A>N</A>.
 DeclareGlobalFunction( "SGV_AssertIsNormalizer" );
+
+#! Claim helper: the centre of <A>G</A> is cyclic of order <A>n</A>.  Both
+#! halves matter -- "order n" alone would not rule out a non-cyclic centre for
+#! composite n -- so the record returned on failure reports each separately.
+DeclareGlobalFunction( "SGV_AssertCenterIsCyclicOfOrder" );
