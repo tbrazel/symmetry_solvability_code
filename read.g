@@ -18,3 +18,5 @@ ReadPackage( "SymmetricGalois", "gap/groups/plane-quartics.g" );
 
 # Claims (assertions about that data).
 ReadPackage( "SymmetricGalois", "gap/checks/subgroup-structure.gi" );
+ReadPackage( "SymmetricGalois", "gap/checks/complex-reflection.gi" );
+ReadPackage( "SymmetricGalois", "gap/checks/abstract-reflection.gi" );

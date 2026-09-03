@@ -37,7 +37,6 @@ SGV_RegisterGroup( rec(
   claims := rec(Size := 51840),
 ));
 
-
 ## grptype I: (C3 x C3 x C3):S4, Carter class A_2, IdGroup [648,704]
 SGV_RegisterGroup( rec(
   id := "cType1",
