@@ -12,8 +12,12 @@ if IsReadableFile( Filename( DirectoriesPackageLibrary( "SymmetricGalois", "gap"
     ReadPackage( "SymmetricGalois", "gap/paper-refs.g" );
 fi;
 
+# Reusable helpers.
+ReadPackage( "SymmetricGalois", "gap/lib/group-theory.gi" );
+
 # Group definitions (data).
 ReadPackage( "SymmetricGalois", "gap/groups/cubic-surfaces.g" );
+ReadPackage( "SymmetricGalois", "gap/groups/cubic-monodromy-groups.g" );
 ReadPackage( "SymmetricGalois", "gap/groups/plane-quartics.g" );
 
 # Claims (assertions about that data).
