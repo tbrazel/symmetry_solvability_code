@@ -19,3 +19,11 @@
 #! together with the squares of the generators of <A>G</A> -- so no subgroup
 #! enumeration is needed.
 DeclareGlobalFunction( "SGV_UniqueIndexTwoSubgroup" );
+
+#! All subgroups <M>H \le</M> <A>G</A> with <C>IdGroup( H ) = </C><A>id</A>.
+#!
+#! Thin wrapper around <C>AllSubgroups</C>; useful when the subgroups
+#! themselves (not just their count) are needed. See also
+#! <C>SGV_CountSubgroupsWithId</C> in <F>checks/subgroup-structure.gi</F>,
+#! which only needs the count.
+DeclareGlobalFunction( "SGV_SubgroupsWithId" );

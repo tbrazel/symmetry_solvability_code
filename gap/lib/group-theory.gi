@@ -20,3 +20,7 @@ InstallGlobalFunction( SGV_UniqueIndexTwoSubgroup, function( G )
         return fail;
     fi;
 end );
+
+InstallGlobalFunction( SGV_SubgroupsWithId, function( G, id )
+    return Filtered( AllSubgroups( G ), H -> IdGroup( H ) = id );
+end );
