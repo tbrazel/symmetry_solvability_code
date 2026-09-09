@@ -137,7 +137,7 @@ SGV_RegisterGroup( rec(
 ###### Type VII  - D8
 # Monstack for Type VII quartics
 SGV_RegisterGroup( rec(
-    id:= "msq8",
+    id:= "msq7",
     field := Rationals,
     comment := "Stacky monodromy for Type VII quartics - equals the normalizer N_W(D8)",
     gens := SGV_GroupData("nType7").gens,
@@ -145,7 +145,7 @@ SGV_RegisterGroup( rec(
 ));
 # Monpar for Type VII quartics
 SGV_RegisterGroup( rec(
-    id:= "mpq8",
+    id:= "mpq7",
     field := Rationals,
     comment := "Parameter monodromy for Type VII quartics - equals the centralizer C_W(D8)",
     gens := [ [ [ -1, 0, 0, 0, 0, 0, 0 ], [ 0, -1, 0, 0, 0, 0, 0 ], [ 0, 0, -1, 0, 0, 0, 0 ], [ 0, 0, 0, -1, 0, 0, 0 ], [ 0, 0, 0, 0, -1, 0, 0 ], [ 0, 0, 0, 0, 0, -1, 0 ], [ 0, 0, 0, 0, 0, -1, 1 ] ], 
@@ -251,7 +251,7 @@ SGV_RegisterGroup( rec(
 ###### Type XII  - C2
 # Monstack for Type XII quartics
 SGV_RegisterGroup( rec(
-    id:= "msq10",
+    id:= "msq12",
     field := Rationals,
     comment := "Stacky monodromy for Type XII quartics - equals the normalizer N_W(C2)",
     gens := SGV_GroupData("nType12").gens,
@@ -259,7 +259,7 @@ SGV_RegisterGroup( rec(
 ));
 # Monpar for Type XII quartics
 SGV_RegisterGroup( rec(
-    id:= "mpq10",
+    id:= "mpq12",
     field := Rationals,
     comment := "Parameter monodromy for Type XII quartics - equals the normalizer N_W(C2)",
     gens := SGV_GroupData("msq10").gens,

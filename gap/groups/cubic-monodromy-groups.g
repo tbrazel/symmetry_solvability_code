@@ -38,7 +38,7 @@ SGV_RegisterGroup( rec(
 
 # Monstack for Type II Cubics (equal to group)
 SGV_RegisterGroup( rec(
-    id := "mmc2",
+    id := "msc2",
     field := Rationals,
     comment := "Stacky monodromy for Type II cubics",
     gens := SGV_GroupData( "cType2").gens,
@@ -85,20 +85,9 @@ SGV_RegisterGroup( rec(
 ));
 
 ###### Type V - S4
-
-# Monpar for Type V Cubics (centralizer K4 = C_W(S4))
-SGV_RegisterGroup( rec(
-    id := "mpc5",
-    field := Rationals,
-    comment := "Parameter-level monodromy for Type V cubics - equals C_W(S4)",
-    gens := [ [ [ 1, 0, 0, 0, 0, 0 ], [ 1, 1, 0, -1, 0, 1 ], [ 1, 0, 1, -1, 0, 1 ], [ 2, 0, 0, -1, 0, 2 ], [ 1, 0, 0, -1, 1, 1 ], [ 0, 0, 0, 0, 0, 1 ] ], 
-  [ [ 0, 1, -1, 0, 0, 0 ], [ 0, 1, -1, 0, 1, -1 ], [ -1, 1, -1, 0, 1, -1 ], [ -1, 2, -1, 0, 1, -2 ], [ -1, 2, 0, -1, 1, -1 ], [ 0, 1, 0, -1, 1, -1 ] ] ],
-  claims := rec(IdGroup := [4,2]),
-));
-
 # Monstack for Type V cubics (normalizer in WE6)
 SGV_RegisterGroup( rec(
-  id := "mmc5",
+  id := "msc5",
   field := Rationals,
   comment := "Stacky monodromy for Type V cubics - equals N_W(S4)",
   gens:=[ [ [ 1, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0 ], [ 0, 1, 1, 0, 0, -1 ], [ 0, 1, 1, -1, 1, -1 ], [ 0, 1, 1, -1, 0, 0 ] ], 
@@ -110,6 +99,15 @@ SGV_RegisterGroup( rec(
   [ [ 0, -1, 0, 0, 1, 0 ], [ -1, -1, 1, 0, 1, -1 ], [ 0, -2, 0, 1, 1, -1 ], [ -1, -2, 1, 1, 1, -1 ], [ -1, -2, 1, 1, 0, 0 ], [ 0, -1, 1, 0, 0, 0 ] ], 
   [ [ 1, 0, -1, 0, 1, -1 ], [ 0, 1, -1, 0, 1, -1 ], [ 0, 0, -1, 0, 2, -2 ], [ 0, 0, -2, 1, 2, -2 ], [ 0, 0, -1, 0, 2, -1 ], [ 0, 0, -1, 0, 1, 0 ] ] ],
   claims := rec(IdGroup := [96, 226]),
+));
+# Monpar for Type V Cubics (centralizer K4 = C_W(S4))
+SGV_RegisterGroup( rec(
+    id := "mpc5",
+    field := Rationals,
+    comment := "Parameter-level monodromy for Type V cubics - equals C_W(S4)",
+    gens := [ [ [ 1, 0, 0, 0, 0, 0 ], [ 1, 1, 0, -1, 0, 1 ], [ 1, 0, 1, -1, 0, 1 ], [ 2, 0, 0, -1, 0, 2 ], [ 1, 0, 0, -1, 1, 1 ], [ 0, 0, 0, 0, 0, 1 ] ], 
+        [ [ 0, 1, -1, 0, 0, 0 ], [ 0, 1, -1, 0, 1, -1 ], [ -1, 1, -1, 0, 1, -1 ], [ -1, 2, -1, 0, 1, -2 ], [ -1, 2, 0, -1, 1, -1 ], [ 0, 1, 0, -1, 1, -1 ] ] ],
+    claims := rec(IdGroup := [4,2]),
 ));
 
 ###### Type VI - D6
@@ -159,9 +157,7 @@ SGV_RegisterGroup( rec(
     claims := rec(IdGroup := [8,1]),
 ));
 
-
 ###### Type VIII - S3
-
 # Monstack for Type VIII cubics
 SGV_RegisterGroup( rec(
   id := "msc8",
@@ -191,7 +187,6 @@ SGV_RegisterGroup( rec(
 ));
 
 ###### Type IX - C4
-
 # Monstack for Type IX cubics
 SGV_RegisterGroup( rec(
   id := "msc9",
@@ -220,7 +215,6 @@ SGV_RegisterGroup( rec(
 ));
 
 ###### Type X - C2.C2
-
 # Monstack for Type X cubics
 SGV_RegisterGroup( rec(
   id := "msc10",
@@ -248,7 +242,6 @@ SGV_RegisterGroup( rec(
 ));
 
 ###### Type XI - C2
-
 # Monstack for Type XI cubics
 SGV_RegisterGroup( rec(
   id := "msc11",

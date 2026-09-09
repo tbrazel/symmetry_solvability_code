@@ -68,17 +68,7 @@ end );
 ##  comment with \Cref{} if you like -- the tool reads both.
 
 
-##  Verifies \Cref{prop:Vtype3}.
-##  |qType3| = 48 = 2^4 * 3, and |qType5| = 16 is exactly the 2-part, so a
-##  subgroup of qType3 matching qType5's IdGroup is automatically a Sylow
-##  2-subgroup; SGV_AssertUniqueSubgroupWithId gives existence, uniqueness,
-##  and isomorphism type in one shot.
-SGV_RegisterClaim( "prop:Vtype3",
-    "qType3 case: qType5 is the unique 2-Sylow subgroup of qType3",
-    function( )
-        return SGV_AssertUniqueSubgroupWithId( SGV_Group( "qType3" ),
-                                               IdGroup( SGV_Group( "qType5" ) ) );
-    end );
+
 
 
 ##  Verifies \Cref{subsec:type3-cubic-monodromy}.
@@ -91,6 +81,9 @@ SGV_RegisterClaim( "subsec:type3-cubic-monodromy",
     end );
 
 
+
+
+
 ##  Verifies \Cref{lem: Type IV C6-pointed cubics}.
 ##  cType4 = ((C3 x C3):C3):C2 (IdGroup [54,8]) contains nine subgroups
 ##  isomorphic to C6 = [6,2], but they form a single conjugacy class: up to the
@@ -100,4 +93,17 @@ SGV_RegisterClaim( "lem: Type IV C6-pointed cubics",
     function( )
         return SGV_AssertUniqueSubgroupClassWithId( SGV_Group( "cType4" ),
                                                     IdGroup( CyclicGroup( 6 ) ) );
+    end );
+
+
+##  Verifies \Cref{prop:Vtype3}.
+##  |qType3| = 48 = 2^4 * 3, and |qType5| = 16 is exactly the 2-part, so a
+##  subgroup of qType3 matching qType5's IdGroup is automatically a Sylow
+##  2-subgroup; SGV_AssertUniqueSubgroupWithId gives existence, uniqueness,
+##  and isomorphism type in one shot.
+SGV_RegisterClaim( "prop:Vtype3",
+    "qType3 case: qType5 is the unique 2-Sylow subgroup of qType3",
+    function( )
+        return SGV_AssertUniqueSubgroupWithId( SGV_Group( "qType3" ),
+                                               IdGroup( SGV_Group( "qType5" ) ) );
     end );
