@@ -244,7 +244,7 @@ SGV_RegisterGroup( rec(
 SGV_RegisterGroup( rec(
     id := "mpq11",
     field := Rationals,
-    comment := "Stacky monodromy for Type XI quartics - equals the unique index two subgroup in N_W(C3)",
+    comment := "Parameter monodromy for Type XI quartics - equals the unique index two subgroup in N_W(C3)",
     gens := SGV_GroupData("msq11").gens,
 ));
 
