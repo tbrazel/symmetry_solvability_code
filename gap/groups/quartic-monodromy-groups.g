@@ -33,7 +33,6 @@ SGV_RegisterGroup( rec(
   field := Rationals,
   comment := "Stacky monodromy for Type II quartics - equals the group itself 4^2:S3",
   gens:= SGV_GroupData("qType2").gens,
-  claims := rec(Size := 1),
 ));
 
 # Monpar for Type II quartics
@@ -42,6 +41,7 @@ SGV_RegisterGroup( rec(
   field := Rationals,
   comment := "Parameter monodromy for Type II quartics - trivial",
   gens:= SGV_GroupData("mpq1").gens,
+  claims := rec(Size := 1),
 ));
 
 ###### Type III  - C4\circledcirc A4
