@@ -23,6 +23,9 @@ ReadPackage( "SymmetricGalois", "gap/groups/plane-quartics.g" );
 # Cached computations (see data/README.md).
 ReadPackage( "SymmetricGalois", "data/plane-quartic-normalizers.g" );
 
+# Monodromy groups depend on the cached nType* normalizers above.
+ReadPackage( "SymmetricGalois", "gap/groups/quartic-monodromy-groups.g" );
+
 # Claims (assertions about that data).
 ReadPackage( "SymmetricGalois", "gap/checks/subgroup-structure.gi" );
 ReadPackage( "SymmetricGalois", "gap/checks/complex-reflection.gi" );

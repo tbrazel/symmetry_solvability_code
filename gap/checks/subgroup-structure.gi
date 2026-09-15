@@ -60,6 +60,16 @@ InstallGlobalFunction( SGV_AssertCenterIsCyclicOfOrder, function( G, n )
                 foundId        := IdGroup( Z ) );
 end );
 
+InstallGlobalFunction( SGV_AssertCentralizerIsSolvable, function( G, H )
+    local C;
+    C := Centralizer( G, H );
+    if IsSolvable( C ) then
+        return true;
+    fi;
+    return rec( centralizerOrder     := Size( C ),
+                centralizerStructure := StructureDescription( C ) );
+end );
+
 #############################################################################
 ##  Claims
 ##
@@ -106,4 +116,56 @@ SGV_RegisterClaim( "prop:Vtype3",
     function( )
         return SGV_AssertUniqueSubgroupWithId( SGV_Group( "qType3" ),
                                                IdGroup( SGV_Group( "qType5" ) ) );
+    end );
+
+
+
+
+##  Verifies \Cref{cor:solvability}.
+##  For each of the eleven cubic-surface symmetry groups cType1, ..., cType11,
+##  the centralizer in W(E6) is solvable.
+SGV_RegisterClaim( "cor:solvability",
+    "Cubic surfaces: the centralizer of each of cType1, ..., cType11 in W(E6) is solvable",
+    function( )
+        local WE6, i, name, result, failures;
+        WE6      := SGV_Group( "WE6" );
+        failures := [];
+        for i in [ 1 .. 11 ] do
+            name   := Concatenation( "cType", String( i ) );
+            result := SGV_AssertCentralizerIsSolvable( WE6, SGV_Group( name ) );
+            if result <> true then
+                result.cType := name;
+                Add( failures, result );
+            fi;
+        od;
+        if IsEmpty( failures ) then
+            return true;
+        fi;
+        return failures;
+    end );
+
+
+
+
+##  Verifies \Cref{sec:radicals}.
+##  For each of the twelve legacy quartic-symmetry groups qType1, ..., qType12,
+##  the centralizer in PSL62 is solvable.
+SGV_RegisterClaim( "sec:radicals",
+    "Quartics: the centralizer of each of qType1, ..., qType12 in PSL62 is solvable",
+    function( )
+        local PSL62, i, name, result, failures;
+        PSL62    := SGV_Group( "PSL62" );
+        failures := [];
+        for i in [ 1 .. 12 ] do
+            name   := Concatenation( "qType", String( i ) );
+            result := SGV_AssertCentralizerIsSolvable( PSL62, SGV_Group( name ) );
+            if result <> true then
+                result.qType := name;
+                Add( failures, result );
+            fi;
+        od;
+        if IsEmpty( failures ) then
+            return true;
+        fi;
+        return failures;
     end );

@@ -21,4 +21,10 @@ gap> List( [ 1 .. 12 ],
 >                   SGV_Group( Concatenation( "nType", String( i ) ) ) ) );
 [ true, true, true, true, true, true, true, true, true, true, true, true ]
 
+##  For each legacy quartic-symmetry type i, the centralizer of qType<i> in
+##  PSL62 is solvable.
+gap> ForAll( [ 1 .. 12 ], i -> SGV_AssertCentralizerIsSolvable( P,
+>      SGV_Group( Concatenation( "qType", String( i ) ) ) ) = true );
+true
+
 gap> STOP_TEST( "plane-quartics.tst" );

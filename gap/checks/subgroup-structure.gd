@@ -34,3 +34,8 @@ DeclareGlobalFunction( "SGV_AssertIsNormalizer" );
 #! halves matter -- "order n" alone would not rule out a non-cyclic centre for
 #! composite n -- so the record returned on failure reports each separately.
 DeclareGlobalFunction( "SGV_AssertCenterIsCyclicOfOrder" );
+
+#! Claim helper: the centralizer of <A>H</A> in <A>G</A> is solvable, i.e.
+#! C_<A>G</A>(<A>H</A>) is a solvable group.  Returns true, or a record
+#! reporting the centralizer's order and structure.
+DeclareGlobalFunction( "SGV_AssertCentralizerIsSolvable" );
