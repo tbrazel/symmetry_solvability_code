@@ -12,8 +12,14 @@ if IsReadableFile( Filename( DirectoriesPackageLibrary( "SymmetricGalois", "gap"
     ReadPackage( "SymmetricGalois", "gap/paper-refs.g" );
 fi;
 
+# Reference data: ATLAS/Carter/Manin labels for the conjugacy classes of
+# WE6 (external data, not computed by this package -- see the file header).
+# Read before gap/lib/we6-classes.gi, which looks names up in it.
+ReadPackage( "SymmetricGalois", "data/we6-conjugacy-classes.g" );
+
 # Reusable helpers.
 ReadPackage( "SymmetricGalois", "gap/lib/group-theory.gi" );
+ReadPackage( "SymmetricGalois", "gap/lib/we6-classes.gi" );
 
 # Group definitions (data).
 ReadPackage( "SymmetricGalois", "gap/groups/cubic-surfaces.g" );
