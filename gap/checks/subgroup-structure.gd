@@ -39,3 +39,20 @@ DeclareGlobalFunction( "SGV_AssertCenterIsCyclicOfOrder" );
 #! C_<A>G</A>(<A>H</A>) is a solvable group.  Returns true, or a record
 #! reporting the centralizer's order and structure.
 DeclareGlobalFunction( "SGV_AssertCentralizerIsSolvable" );
+
+#! Claim helper: the extension <M>1 \to</M> <A>N</A> <M>\to</M> <A>G</A>
+#! <M>\to</M> <A>G</A>/<A>N</A> <M>\to 1</M> splits, i.e. <A>N</A> has a
+#! complement in <A>G</A> (a subgroup <M>H \le</M> <A>G</A> with
+#! <M>H \cap</M> <A>N</A> <M>= 1</M> and <M>HN =</M> <A>G</A>).  <A>N</A>
+#! must be normal in <A>G</A>.  Returns true, or a record describing the
+#! (lack of) complement classes found.
+DeclareGlobalFunction( "SGV_AssertIsSplitExtension" );
+
+#! Claim helper: the extension <M>1 \to</M> <A>N</A> <M>\to</M> <A>G</A>
+#! <M>\to</M> <A>G</A>/<A>N</A> <M>\to 1</M> does not split, i.e. <A>N</A>
+#! has no complement in <A>G</A>.  The negation of
+#! <C>SGV_AssertIsSplitExtension</C>, kept as its own claim helper so a
+#! failure reads as "found a complement" rather than "did not find no
+#! complement".  Returns true, or a record describing the complement
+#! classes found.
+DeclareGlobalFunction( "SGV_AssertIsNonsplitExtension" );

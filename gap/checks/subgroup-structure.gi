@@ -70,6 +70,29 @@ InstallGlobalFunction( SGV_AssertCentralizerIsSolvable, function( G, H )
                 centralizerStructure := StructureDescription( C ) );
 end );
 
+InstallGlobalFunction( SGV_AssertIsSplitExtension, function( G, N )
+    local classes;
+    classes := ComplementClassesRepresentatives( G, N );
+    if not IsEmpty( classes ) then
+        return true;
+    fi;
+    return rec( normalSubgroupOrder := Size( N ),
+                quotientOrder       := Size( G ) / Size( N ),
+                complementClasses   := 0 );
+end );
+
+InstallGlobalFunction( SGV_AssertIsNonsplitExtension, function( G, N )
+    local classes;
+    classes := ComplementClassesRepresentatives( G, N );
+    if IsEmpty( classes ) then
+        return true;
+    fi;
+    return rec( normalSubgroupOrder := Size( N ),
+                quotientOrder       := Size( G ) / Size( N ),
+                complementClasses   := Length( classes ),
+                complementIds       := SortedList( List( classes, IdGroup ) ) );
+end );
+
 #############################################################################
 ##  Claims
 ##
